@@ -1,0 +1,11 @@
+.form--inline {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-holder--block {
+    display: block;
+    /* text-align: center; */
+}

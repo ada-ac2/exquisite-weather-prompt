@@ -1,0 +1,13 @@
+.city-form--inline {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+p {
+    padding-right: 5px;
+}
+
+input {
+    margin: 5px;
+}
