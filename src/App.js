@@ -17,8 +17,9 @@ const getLatLon = (locationName) => {
       },
     })
     .then((response) => {
-      const lat = parseFloat(response.data[0].lat);
-      const lon = parseFloat(response.data[0].lon);
+      const firstResult = response.data[0];
+      const lat = parseFloat(firstResult.lat);
+      const lon = parseFloat(firstResult.lon);
 
       return { lat, lon };
     });

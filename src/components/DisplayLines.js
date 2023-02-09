@@ -2,14 +2,16 @@ import React from "react";
 
 const DisplayLines = ({ lineData, showAllLines, toggleShowAllLines }) => {
   let linesOfText = <p>{lineData[lineData.length - 1]}</p>;
-  if (showAllLines) {
-    linesOfText = lineData.map((line) => {
-      return <p>{line}</p>;
-    });
-  }
+  let headerText = "Last Line";
+  let buttonText = "Show Final Poem";
 
-  const headerText = showAllLines ? "Final Poem:" : "Last Line:";
-  const buttonText = showAllLines ? "Show Only Last Line" : "Show All Lines";
+  if (showAllLines) {
+    linesOfText = lineData.map((line, index) => {
+      return <p key={index}>{line}</p>;
+    });
+    headerText = "Final Poem";
+    buttonText = "Show Only Last Line";
+  }
 
   return (
     <section>
